@@ -1,0 +1,24 @@
+.navigation{
+      display: flex;
+      justify-content: space-between;
+      .menuList{
+            background: #FFFFFF;
+            padding: 4px 14px;
+            display: flex;
+            border-radius: 30px;
+            align-items: center;
+            .titleList{ 
+                  margin-right: 9px;
+                  color: #000000;
+                  font-weight: 400;
+                  font-size: 16px;  
+            }
+            .icon{
+                  & img{
+                  width: 24px;
+                  height: 24px;
+                  }
+                  
+            }
+      }
+}

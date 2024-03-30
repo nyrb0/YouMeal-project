@@ -1,0 +1,15 @@
+.nameFast{
+     display: flex;
+     align-items: center;
+     margin-top: 24px;
+     .titleFast{
+          font-size: 25px;
+          font-weight: 600;
+          color: white;
+          margin-right: 7px;
+     }
+     .icon{
+          position: relative;
+          top: 5px;
+     }
+}
