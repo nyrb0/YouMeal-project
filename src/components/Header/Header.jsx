@@ -10,7 +10,7 @@ const Header = ()=>{
       useEffect(()=>{
             const dataFoodsList = async()=>{
                   try{
-                        const responseFromServerList = await fetch('http://localhost:3001/listGoods')
+                        const responseFromServerList = await fetch('http://localhost:3000/listGoods')
                         if(!responseFromServerList.ok){
                               throw new Error('Ошибка данных')
                         }
@@ -32,7 +32,7 @@ const Header = ()=>{
                                     <NameFast/>
                                     <HeaderItem/>
                               </div>
-                             
+                              
                         </div>
                   </div>
                   <div className={headerClass.list}>

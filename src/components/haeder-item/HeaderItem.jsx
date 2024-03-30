@@ -14,7 +14,7 @@ const HeaderItem = ()=>{
                                     Только самые <br /> <span>сочные бургеры!</span>
                               </h1>
                               <div className={headerItemClass.deliveryOrder}>
-                                    Бесплатная доставка от <span>599₽</span>
+                                    Бесплатная доставка от <span>599сом</span>
                               </div>
                         </div>
                   </div>

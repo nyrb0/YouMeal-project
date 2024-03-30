@@ -1,8 +1,5 @@
+import { Link } from 'react-router-dom';
 import lFoodsClass from './ListFoods.module.scss'
-
-
-
-
 
 const ListFoods = ({list})=>{
 
@@ -10,16 +7,18 @@ const ListFoods = ({list})=>{
             <div className={lFoodsClass.list}>
                   <nav className={lFoodsClass.navigation}>
                         {list.map(listFoods=>(
-                              <ul key={listFoods.id}>
-                                    <li className={lFoodsClass.menuList} >
-                                          <div className={lFoodsClass.titleList}>
-                                                {listFoods.title}
-                                          </div>
-                                          <div className={lFoodsClass.icon}>
-                                                <img src={listFoods.url} alt="dcd" />
-                                          </div>
-                                    </li>
-                              </ul>
+                              <Link to="/hamburger" key={listFoods.id}>
+                                    <ul>
+                                          <li className={lFoodsClass.menuList} >
+                                                <div className={lFoodsClass.titleList}>
+                                                      {listFoods.title}
+                                                </div>
+                                                <div className={lFoodsClass.icon}>
+                                                      <img src={listFoods.url} alt="dcd" />
+                                                </div>
+                                          </li>
+                                    </ul>
+                              </Link>
                         ))}
                   </nav>
             </div>

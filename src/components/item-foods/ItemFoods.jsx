@@ -1,22 +1,29 @@
+import Button from '../UI/Button/Button';
+import PhotoFoods from '../photo-foods/PhotoFoods';
 import itemFoodsClass from './ItemFoods.module.scss'
 const ItemFoods =({data})=>{
-      console.log(data);
+      
       return(
             <div className={itemFoodsClass.showTheFood}>
-
                   <div className={itemFoodsClass.box}>
                         <div className={itemFoodsClass.imgFood}>
-                              <img src={data.url} alt="Бургер" />
+                              <PhotoFoods img={data.url}/>
                         </div>
-                        <div className={itemFoodsClass.price}>
-                              {data.price}
-                        </div>
-                        <div className={itemFoodsClass.gram}>
-                              {data.weight}
+                        <div className={itemFoodsClass.information}>
+                              <div className={itemFoodsClass.price}>
+                                    {data.price} сом
+                              </div>
+                              <div className={itemFoodsClass.title}>
+                                    {data.title}
+                              </div>
+                              <div className={itemFoodsClass.gram}>
+                                    {data.weight}г
+                              </div>
                         </div>
                         <div className={itemFoodsClass.btn}>
-                              
+                              <Button>Добавить</Button>
                         </div>
+                        
                   </div>
             </div>
       )

@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react';
 import ItemFoods from '../item-foods/ItemFoods';
 import structureClass from './Structure.module.scss'
 
-const Structure = ()=>{
+const Structure = ({urlToData})=>{
 
       const [dataProgress,setDataProgress]=useState([])
 
       useEffect(()=>{
             const data = async()=>{
                   try{
-                        const responseFromServerSt = await fetch('http://localhost:3001/burgersData');
+                        const responseFromServerSt = await fetch(urlToData);
                         if(!responseFromServerSt.ok){
                               throw new Error('Ошибка данных')
                         }

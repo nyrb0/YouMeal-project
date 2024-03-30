@@ -12,6 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #f9f9f9;
+  height: 10000px;
 }
 body {
   margin: 0;
@@ -27,4 +28,8 @@ body {
 ul {
   padding: 0;
   margin: 0;
+}
+.app_content {
+  display: flex;
+  margin-top: 50px;
 }

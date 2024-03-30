@@ -1,10 +1,35 @@
 .showTheFood{
-      .imgFood{
-            & img{
-                  height: 220px;
-                  width: 276px;
+      .box{      
+            background: #FFFFFF;
+            color: #000000;
+            width: 300px;
+            border-radius: 15px;
+            .imgFood{
+                  display: flex;
+                  justify-content: center;
+                  padding-top: 12px;
             }
-            
-            
+            .information{
+                  margin-top: 16px;
+                  margin-left: 12px;
+                  .price{
+                        font-size: 24px;
+                        font-weight: 600; 
+                        margin: 0 0 8px 0;
+                  }
+                  .title{
+                        margin: 0 0 29px 0;
+                  }
+                  .gram{
+                        
+                        color: #B1B1B1;
+                        font-size: 16px;
+                        font-weight: 400;
+                  }
+            }
+            .btn{
+                  display: flex;
+                  justify-content: center;
+            }
       }
 }

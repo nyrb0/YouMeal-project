@@ -1,19 +1,28 @@
+import { Route, Router, Routes } from "react-router-dom"
+import PageHamburger from "./PAGES/hamburger-page/PageHamburger"
 import Header from "./components/Header/Header"
 import ItemFoods from "./components/item-foods/ItemFoods"
 import Structure from "./components/structure/Structure"
-
+import LeftCart from "./components/left-cart/LeftCart"
 function App() {
   
 
   return (
-    <div className="app"> 
-          <Header/>
-      <div className="container">
-        <main>
-          <Structure/>
-        </main>
+      <div className="app"> 
+            <Header/>
+        <div className="container">
+          <main>
+          
+            <div className="app_content">
+              <LeftCart />
+              <Routes>
+                <Route path={'/hamburger'} element={<PageHamburger/>}/>
+              </Routes>
+            </div>
+          </main>
+        </div>
       </div>
-    </div>
+
 
   )
 }
