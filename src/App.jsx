@@ -12,7 +12,6 @@ function App() {
             <Header/>
         <div className="container">
           <main>
-          
             <div className="app_content">
               <LeftCart />
               <Routes>

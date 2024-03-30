@@ -1,3 +1,40 @@
 .blockCart{
+      width: 400px;
+      height: 467px;
+      border-radius: 10px;
       color: black;
+      background: #FFFFFF;
+      padding: 0 0 12px 0;
+      margin-right: 30px;
+      
+      .wrapper{
+            padding: 0 16px 0 16px;
+            .cart{
+                  .cartHeader{
+                        margin-top: 24px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 12px;
+                        .title{
+                              font-size: 24px;
+                              font-weight: 600;
+                              }
+                              .amount{
+                              display: flex;
+                              justify-content: center;
+                              font-weight: 400;
+                              font-size: 16px;
+                              background: #F2F2F3;
+                              width: 41px;
+                              border-radius: 14px;
+                              }
+                  }
+                  .line{
+                        background: #F2F2F3;
+                        height: 2px;
+                        width: 100%;
+                  }
+            }
+      }
 }
