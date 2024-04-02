@@ -1,8 +1,9 @@
 
+import SelectedFood from '../selected-food/SelectedFood';
 import cartClass from './LeftCart.module.scss'
-
+import { useSelector } from 'react-redux';
 const LeftCart = ({count})=>{
-
+      
       return(
             <div className={cartClass.blockCart}> 
                   <div className={cartClass.wrapper}>
@@ -19,6 +20,7 @@ const LeftCart = ({count})=>{
                               </div>
                         </div>
                         <div className={cartClass.bought}>
+                              <SelectedFood/>
                         </div> 
                   </div>     
             </div>

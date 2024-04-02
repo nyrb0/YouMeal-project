@@ -1,0 +1,41 @@
+.theFood{
+      padding-top: 16px;
+      font-weight: 400;
+      .wrapper{
+            .content{
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  .info{
+                        display: flex;
+                        align-items: center;
+                        .thePhoto{
+                              & img{
+                                    width: 64px;
+                                    height: 52px;
+                                    border-radius: 15px;
+                                    padding-right: 6px;
+                              }
+                        }
+                        .description{
+                              font-size: 12px;
+                              .weight{
+                                    color: #B1B1B1;
+                              }
+                        }
+                  }
+                  .amount{
+                        background: #F2F2F3;
+                        width: 86px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        font-weight: 400;
+                        border-radius: 15px;
+                        .quantity{
+                              padding: 0 18px 0 18px ;
+                        }
+                  }
+            }
+      }
+}

@@ -1,13 +1,18 @@
+import { useDispatch, useSelector } from 'react-redux';
 import Button from '../UI/Button/Button';
 import PhotoFoods from '../photo-foods/PhotoFoods';
 import itemFoodsClass from './ItemFoods.module.scss'
+import { addToCart } from '../../purchased';
+import FoodsBuy from '../foods-buy/FoodsBuy';
 const ItemFoods =({data})=>{
-      
+
       return(
             <div className={itemFoodsClass.showTheFood}>
                   <div className={itemFoodsClass.box}>
                         <div className={itemFoodsClass.imgFood}>
-                              <PhotoFoods img={data.url}/>
+                              <div className={itemFoodsClass.contentImg}>
+                                    <PhotoFoods img={data.url}/>
+                              </div>
                         </div>
                         <div className={itemFoodsClass.information}>
                               <div className={itemFoodsClass.price}>
@@ -21,7 +26,7 @@ const ItemFoods =({data})=>{
                               </div>
                         </div>
                         <div className={itemFoodsClass.btn}>
-                              <Button>Добавить</Button>
+                              <FoodsBuy data={data}/>
                         </div>
                         
                   </div>

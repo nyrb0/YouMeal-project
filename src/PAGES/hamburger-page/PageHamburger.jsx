@@ -5,9 +5,10 @@ const PageHamburger = ()=>{
 
       return(
             <div className={pageHambur.page}> 
-                  <div className={pageHambur.nameMenu}>
-                        Бургеры
-                  </div>
+            <div className={pageHambur.nameMenu}>
+                  Бургер
+            </div>
+                  
                   <Structure urlToData={"http://localhost:3000/burgersData"}/>
             </div>
       )

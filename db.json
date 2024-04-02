@@ -1,6 +1,6 @@
 {
       "listGoods": [
-        { "id": 1, "title": "Бургеры","url":"https://cdn-icons-png.flaticon.com/512/5787/5787016.png" },
+        { "id": 1, "title": "Бургеры","url":"https://cdn-icons-png.flaticon.com/512/5787/5787016.png","toLink":"/hamburger" },
         { "id": 2, "title": "Закуски", "url":"https://cdn-icons-png.flaticon.com/512/4506/4506204.png"},
         { "id": 3, "title": "Хот-доги" , "url":"https://cdn-icons-png.flaticon.com/512/4803/4803052.png"},
         { "id": 4, "title": "Комбо", "url":"https://cdn-icons-png.flaticon.com/512/4221/4221407.png" },
