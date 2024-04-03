@@ -20,36 +20,41 @@ const SelectedFood = ()=>{
                   <div className={selectedFoodClass.wrapper}>
                         {!inData.length ? (
                               <div className={selectedFoodClass.empty}>
-                                    {"Корзина пуста("}
+                                    {"Тут пока пусто :("}
                               </div>
                         ):(
                         inData.map(selected=>(
                               <div className={selectedFoodClass.content} key={selected.id}>
-                                    <div className={selectedFoodClass.info}>
-                                          <div className={selectedFoodClass.thePhoto}>
-                                                <img src={selected.url} alt="" />
-                                          </div>
-                                          <div className={selectedFoodClass.description}>
-                                                <div className={selectedFoodClass.title}>
-                                                      {selected.title}
+                                    <div className={selectedFoodClass.line}>
+                                    </div>                  
+                                    <div className={selectedFoodClass.contentTwo}>
+                                          <div className={selectedFoodClass.info}>
+                                                <div className={selectedFoodClass.thePhoto}>
+                                                      <img src={selected.url} alt="" />
                                                 </div>
-                                                <div className={selectedFoodClass.weight}>
-                                                      {selected.weight}г
-                                                </div>
-                                                <div className={selectedFoodClass.price}>
-                                                      {selected.price}сом
+                                                <div className={selectedFoodClass.description}>
+                                                      <div className={selectedFoodClass.title}>
+                                                            {selected.title}
+                                                      </div>
+                                                      <div className={selectedFoodClass.weight}>
+                                                            {selected.weight}г
+                                                      </div>
+                                                      <div className={selectedFoodClass.price}>
+                                                            {selected.price}сом
+                                                      </div>
                                                 </div>
                                           </div>
-                                    </div>
-                                    <div className={selectedFoodClass.amount}>
-                                          <CounterButton onClick={downQuantity}>-</CounterButton>
-                                          <div className={selectedFoodClass.quantity}>
-                                                {quantity}
+                                          <div className={selectedFoodClass.amount}>
+                                                <CounterButton onClick={downQuantity}>-</CounterButton>
+                                                <div className={selectedFoodClass.quantity}>
+                                                      {quantity}
+                                                </div>
+                                                <CounterButton onClick={upQuantity}>+</CounterButton>
                                           </div>
-                                          <CounterButton onClick={upQuantity}>+</CounterButton>
                                     </div>
                               </div>
                         )))}
+                        
                   </div>
             </div>
       )

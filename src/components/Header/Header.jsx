@@ -29,7 +29,12 @@ const Header = ()=>{
                   <div className={headerClass.header}>
                         <div className={headerClass.wrapper}>
                               <div className={headerClass.content}>
-                                    <NameFast/>
+                                    <div className={headerClass.NameFast}>
+                                          <NameFast 
+                                          size={'25px'}
+                                          color={'white'}
+                                          />
+                                    </div>
                                     <HeaderItem/>
                               </div>
                               
@@ -38,7 +43,6 @@ const Header = ()=>{
                   <div className={headerClass.list}>
                         <ListFoods list={dataListF}/> 
                   </div>
-                  
             </header>
       )
 }

@@ -28,7 +28,6 @@ const ItemFoods =({data})=>{
                         <div className={itemFoodsClass.btn}>
                               <FoodsBuy data={data}/>
                         </div>
-                        
                   </div>
             </div>
       )

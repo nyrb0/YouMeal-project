@@ -1,12 +1,17 @@
 .contentHeader{
       display: flex;
-     
+      .hamburger{
+            & img{
+                  animation: moveImg 8s linear infinite;
+            }
+      }
       .text{
             font-family: Nunito;
             font-weight: 800;
             font-size: 35px;
             line-height: 60px;
             margin-left: 21px;
+            
             & h1{
                   & span{
                         color: #FF5C00;
@@ -21,5 +26,22 @@
                   font-weight: 600;
                  
             }
+      }
+}
+@keyframes moveImg{
+      0%{
+            transform: translateX(0);
+      }
+      25%{
+            transform: translateY(15px);
+      }
+      50%{
+            transform: translateX(15px);
+      }
+      75%{
+            transform: translateY(0px);
+      }
+      100%{
+            transform: translateX(0px);
       }
 }

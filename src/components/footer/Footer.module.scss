@@ -1,0 +1,50 @@
+.footerClass{
+      color: black;
+      background: #FFFFFF;
+      margin-top: 90px;
+      .bg{
+            padding-top: 61px;
+            width: 100%;
+            margin: 0 auto;
+            max-width: 1440px;
+            padding-bottom: 39px;
+            .contact{
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  .callAndKnowAbout{
+                        display: flex;
+                        padding-right: 190px;
+                        
+                        .number{
+                              padding-right: 126px;
+                              .direction{
+                                    font-size: 24px;
+                                    padding-bottom: 24px;
+                              }
+                              .num{
+                                    display: flex;
+                                    align-items: center;
+                                    & img{
+                                          position: relative;
+                                          top: 2px
+                                    }
+                              }
+                        }
+                        .social{
+                              .direction{
+                                    font-size: 24px;
+                              }
+                              .linkToSocialIcon{
+                                    padding-top: 22px;      
+                              }
+
+                        }
+                  }
+            }
+            .year{
+                  padding-top: 60px;
+            }
+      }
+      
+}

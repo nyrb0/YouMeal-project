@@ -6,6 +6,7 @@ import Structure from "./components/structure/Structure"
 import LeftCart from "./components/left-cart/LeftCart"
 import { Provider } from "react-redux"
 import store from "./cartFoodStore"
+import Footer from "./components/footer/Footer"
 function App() {
   
 
@@ -25,6 +26,9 @@ function App() {
             </div>
           </main>
         </div>
+        <footer>
+          <Footer/>
+        </footer>
       </div>
     </Provider>
 
