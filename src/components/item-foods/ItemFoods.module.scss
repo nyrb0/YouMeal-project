@@ -33,9 +33,12 @@
                   }
             }
             .btn{
+                  padding-bottom: 12px;
                   display: flex;
                   justify-content: center;
-                  padding-bottom: 12px;
+                  & span{
+                        width: 276px;
+                  }
             }
       }
 }

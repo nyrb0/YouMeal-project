@@ -1,21 +1,24 @@
 import classNames from 'classnames'
-import buttonClass from './Button.module.scss'
+import'./Button.scss'
 
 const Button = ({
+      first,
       children,
       size,
       type,
       onClick
 })=>{
-
-
       const dataClass = classNames({
-            "first":true,
+            'btn':true,
+            "first":first === 'first',
+            "order":first === 'order',
             "active": type === "active",
+            "type-btn": first === 'type-btn',
+            
       })
 
       return(
-            <button className={buttonClass.btn} onClick={onClick}>
+            <button className={dataClass} onClick={onClick}>
                   {children}
             </button>
       )

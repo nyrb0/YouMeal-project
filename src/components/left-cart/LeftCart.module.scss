@@ -34,4 +34,77 @@
                   padding-top: 12px;
             }
       }
+      .order{
+           position: relative;
+            .orderWrapper{
+                  display: flex;
+                  .orangeBgLeft{
+                        background-color: #FFAB08;
+                        height: 432px;
+                        border-top-left-radius: 15px;
+                        border-end-start-radius: 15px;
+                        .donut{
+                              padding-top: 65px;
+                              padding-right: 21px;
+                        }
+                  }
+                  .right{
+                        padding-top: 44px;
+                        width: 294px;
+                        height: 100px;
+                        padding-left: 24px;
+                        .delivery{
+                              font-size: 24px;
+                              font-weight: 600  ;
+                              padding-bottom: 16px;
+                             }
+                        .writeData{
+                              .checkbox{
+                                    padding: 16px 0 16px 0;
+                                    .selfDelivery{
+                                          & span{
+                                                padding-left: 8px;
+                                          }
+                                    }
+                                    .deliveryTo{
+                                          & span{
+                                                padding-left: 8px;
+                                          }
+                                    }
+                              }
+                              .nameUser{
+                                    padding-bottom: 8px;
+                              }
+                              .address1{
+                                    padding-bottom: 8px;
+                              }
+                              .address2{
+                                    display: flex;
+                                    .floor{
+                                          width:130px ;
+                                          margin-right: 30px;
+                                    }
+                                    .addressNumber{
+                                          width:130px ;
+                                    }
+                              }
+
+                        }
+                        .implement{
+                              padding-top: 32px;
+                              width: 294px + 24px;
+                              display: flex;
+                              justify-content: center;
+                        }
+                  }
+            }
+
+      }
+      .exit{
+            position: absolute;
+            top: 24px;
+            right: 24px;
+
+      }
+
 }

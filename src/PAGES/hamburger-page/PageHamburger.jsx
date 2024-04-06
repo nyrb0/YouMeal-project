@@ -8,7 +8,6 @@ const PageHamburger = ()=>{
             <div className={pageHambur.nameMenu}>
                   Бургер
             </div>
-                  
                   <Structure urlToData={"http://localhost:3000/burgersData"}/>
             </div>
       )

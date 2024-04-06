@@ -5,16 +5,15 @@ import { useSelector } from 'react-redux';
 import { useState } from 'react';
 const SelectedFood = ()=>{
       const inData = useSelector(state=>state.foodsCart.cartStateNow)
-
-      const [quantity,setQuantity]=useState(0)
-
+      const [quantity,setQuantity]=useState(
+            inData.map(item=> ({...item, quantityCount:0}))
+      ); 
       const upQuantity = ()=>{
-            setQuantity(count=> count+1)
+            setQuantity(prevQuantity=> prevQuantity.map(item=>({
+                  ...item,quantityCount: item.quantityCount+1
+            })))  
       }
-      const downQuantity = ()=>{
-            if(quantity === 0) return 0
-            setQuantity(count=> count-1)
-      }
+      console.log(quantity)
       return(
             <div className={selectedFoodClass.theFood}>
                   <div className={selectedFoodClass.wrapper}>
@@ -45,7 +44,7 @@ const SelectedFood = ()=>{
                                                 </div>
                                           </div>
                                           <div className={selectedFoodClass.amount}>
-                                                <CounterButton onClick={downQuantity}>-</CounterButton>
+                                                <CounterButton onClick={null}>-</CounterButton>
                                                 <div className={selectedFoodClass.quantity}>
                                                       {quantity}
                                                 </div>

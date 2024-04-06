@@ -7,10 +7,21 @@ const foodsSlice = createSlice({
   },
   reducers: {
     addToCart: (state, action) => {
+      const existingItem = state.cartStateNow.find(
+        (item) => item.id === action.payload.id
+      );
+      if (state.cartStateNow.length !== 0) {
+        if (existingItem) {
+          return state;
+        }
+      }
+
       state.cartStateNow.push(action.payload);
     },
-    delateToCart: (state, payload) => {
-      state.cartStateNow.filter((cart) => cart.id !== payload.id);
+    delateToCart: (state, action) => {
+      state.cartStateNow = state.cartStateNow.filter(
+        (cart) => cart.id !== action.payload.id
+      );
     },
   },
 });
