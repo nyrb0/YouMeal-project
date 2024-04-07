@@ -1,17 +1,37 @@
 .contentHeader{
       display: flex;
+      @media (max-width:540px){  
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            
+      }
       .hamburger{
             & img{
                   animation: moveImg 8s linear infinite;
+                  width: 253.41px;
+                  height: 289.95px;
+                  @media (max-width:768px){  
+                        width: 227px;
+                        height: 229px;
+                  }
+            }
+            @media (max-width:540px){  
+                  display: flex;
+                  justify-content: center;
+                  
             }
       }
       .text{
             font-family: Nunito;
             font-weight: 800;
-            font-size: 35px;
+            font-size: 50px;
             line-height: 60px;
             margin-left: 21px;
-            
+            @media (max-width:991px){  
+                  font-size: 20px;
+                  line-height: 36px;
+            }
             & h1{
                   & span{
                         color: #FF5C00;

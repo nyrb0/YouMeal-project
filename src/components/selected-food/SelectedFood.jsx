@@ -3,6 +3,7 @@ import PhotoFoods from '../photo-foods/PhotoFoods';
 import selectedFoodClass  from './SelectedFood.module.scss'
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
+import Amount from '../amount/Amount';
 const SelectedFood = ()=>{
       const inData = useSelector(state=>state.foodsCart.cartStateNow)
       const [quantity,setQuantity]=useState(
@@ -43,13 +44,7 @@ const SelectedFood = ()=>{
                                                       </div>
                                                 </div>
                                           </div>
-                                          <div className={selectedFoodClass.amount}>
-                                                <CounterButton onClick={null}>-</CounterButton>
-                                                <div className={selectedFoodClass.quantity}>
-                                                      {quantity}
-                                                </div>
-                                                <CounterButton onClick={upQuantity}>+</CounterButton>
-                                          </div>
+                                          <Amount/>
                                     </div>
                               </div>
                         )))}

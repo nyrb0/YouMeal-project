@@ -1,10 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const initialState = {
+  cartStateNow: [],
+  isTrue: false,
+};
+
 const foodsSlice = createSlice({
   name: "fastFood",
-  initialState: {
-    cartStateNow: [],
-  },
+  initialState,
   reducers: {
     addToCart: (state, action) => {
       const existingItem = state.cartStateNow.find(
@@ -23,8 +26,11 @@ const foodsSlice = createSlice({
         (cart) => cart.id !== action.payload.id
       );
     },
+    toggle: (state) => {
+      state.isTrue = !state.isTrue;
+    },
   },
 });
-export const { addToCart, delateToCart } = foodsSlice.actions;
+export const { addToCart, delateToCart, toggle } = foodsSlice.actions;
 
 export default foodsSlice.reducer;

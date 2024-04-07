@@ -43,6 +43,12 @@
                         height: 432px;
                         border-top-left-radius: 15px;
                         border-end-start-radius: 15px;
+                        @media (max-width:991px){  
+                              background: none;
+                              & img{
+                                    display: none;
+                              }
+                        }
                         .donut{
                               padding-top: 65px;
                               padding-right: 21px;
@@ -57,7 +63,7 @@
                               font-size: 24px;
                               font-weight: 600  ;
                               padding-bottom: 16px;
-                             }
+                              }
                         .writeData{
                               .checkbox{
                                     padding: 16px 0 16px 0;

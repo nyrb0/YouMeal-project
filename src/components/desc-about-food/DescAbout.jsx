@@ -10,15 +10,16 @@ const DescAbout = ({isOpen,desc})=>{
       console.log(desc);
       const dispatch = useDispatch()
       const [active,setActive]=useState(false)
+      const inSelected = useSelector(state=>state.foodsCart.cartStateNow)
       const addToSelected = () => {
             setActive(active=>!active)
             if (active) { 
-              dispatch(addToCart(desc)); 
+                  dispatch(addToCart(desc)); 
             }
             else{
                   dispatch(delateToCart(desc))
             }
-          }
+      }
       return(
             <div className={descAboutClass.desc}>
                   <div className={descAboutClass.exit}>

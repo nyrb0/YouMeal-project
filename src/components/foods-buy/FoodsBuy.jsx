@@ -5,19 +5,18 @@ import { useState } from 'react';
 import { delateToCart,addToCart } from '../../purchased';
 const FoodsBuy = ({data})=>{
       const dispatch = useDispatch();
-      const [active,setActive]=useState(false)
       const inSelected = useSelector(state=> state.foodsCart.cartStateNow)
+      const isInSelected = inSelected.some(item=>item.id === data.id)
       const handle = ()=>{
-            setActive(active=>!active)
-            if(active){
+            if(isInSelected){
                   dispatch(delateToCart(data))
             }else{      
-                  dispatch(addToCart(data))     
+                  dispatch(addToCart(data))
             }
       }
       return(
             <div className={foodsBuyClass.buyThis}>
-                  <Button onClick={handle} first={active ?  "type-btn" : 'first'}>Выбрать</Button>
+                  <Button onClick={handle} first={isInSelected ?  "type-btn" : 'first'}>{isInSelected ? 'Выбрано': 'Выбрать'}</Button>
             </div>      
       )
 }

@@ -5,13 +5,23 @@
             color: #000000;
             width: 300px;
             border-radius: 15px;
+            @media (max-width:991px){     
+                  width: 160px;
+            }
             .imgFood{                                    
                   width: 276px;
                   padding-top: 12px;
+                  @media (max-width:991px){
+                        padding-top: 6px;
+                        width: 137px;
+                  }
                   .contentImg{
-                        padding-right: 12px;
-                        padding-left: 12px;
-                        
+                        margin-right: 12px;
+                        margin-left: 12px;
+                        @media (max-width:991px){
+                              margin-right: 4px;
+                              margin-left: 4px;
+                        }
                   }
             }
             .information{
@@ -38,6 +48,10 @@
                   justify-content: center;
                   & span{
                         width: 276px;
+                        @media (max-width:991px){
+                              width: 137px;
+                              
+                        }
                   }
             }
       }

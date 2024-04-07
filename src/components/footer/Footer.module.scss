@@ -9,12 +9,16 @@
             max-width: 1440px;
             padding-bottom: 39px;
             .contact{
+                  margin-left: 10px;      
                   display: flex;
+                  @media (max-width:826px){  
+                        display: block;
+                  }
                   align-items: center;
                   justify-content: space-between;
                   .callAndKnowAbout{
                         display: flex;
-                        padding-right: 190px;
+                        padding-right: 10px;
                         
                         .number{
                               padding-right: 126px;
