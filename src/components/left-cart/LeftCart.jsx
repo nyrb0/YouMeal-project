@@ -4,7 +4,7 @@ import TotalAmount from '../total-amount/TotalAmount';
 import cartClass from './LeftCart.module.scss'
 import { useSelector } from 'react-redux';
 import Button from '../UI/Button/Button';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Modal from '../Modal/Modal';
 import Exit from '../UI/Button/exit/Exit';
 import Input from '../UI/input/Input';
@@ -12,16 +12,32 @@ import Checkbox from '../UI/checkbox/Checkbox';
 const LeftCart = (   )=>{
       const countTheCart = useSelector(state=> state.foodsCart.cartStateNow)
       const [order,setOrder]=useState(false)
-      
+      const [isScreen ,setIsScreen] = useState(false)
+      const [openMenuList,setOpenMenuList]=useState(false)
       const openToOrder = ()=>{
             setOrder(order=>!order)
       }
+      useEffect(()=>{
+            const handleResize = ()=>{
+                  setIsScreen(window.innerWidth >=991)
+            }
+            handleResize()
+            window.addEventListener('resize',handleResize)
+
+            return ()=>{
+                  window.removeEventListener('resize',handleResize)
+            }
+      },[])
+      const handleOpenTheMenu = ()=>{
+            setOpenMenuList(open=>!open)
+      }
+      
       
       return(
             <div className={cartClass.blockCart}> 
                   <div className={cartClass.wrapper}>
                         <div className={cartClass.cart}>
-                              <div className={cartClass.cartHeader}>
+                              <div className={cartClass.cartHeader} onClick={()=>setOpenMenuList(true)}>
                                     <div className={cartClass.title}>
                                           Выбрано
                                     </div>
@@ -32,21 +48,46 @@ const LeftCart = (   )=>{
                               <div className={cartClass.line}>
                               </div>
                         </div>
-                        <div className={cartClass.bought}>
-                              <div>
-                              <SelectedFood/>
-                              </div>
-                        </div> 
-                        {countTheCart.length > 0 ?
+                        {isScreen ? 
                         (<span>
+                              <div className={cartClass.bought}>
+                                    <div>
+                                          <SelectedFood/>
+                                    </div>
+                              </div> 
                         <TotalAmount totalPrice={countTheCart}/>
                         <Button first={'order'} onClick={openToOrder}>Оформить заказ</Button>
-                        <div className={cartClass.freeOrder} style={{display:'flex',alignItems:'center'}}>
-                              <img src="/icons/freeOrder.svg" alt="Бесплатная доставка" style={{paddingRight:'8px'}} />
-                              Бесплатная доставка
+                        <div className={cartClass.freeOrder} style={{display:'flex',alignItems:'center',justifyContent:"space-between"}}>
+                              <div style={{display:"flex",alignItems:"center"}}>
+                                    <img src="/icons/freeOrder.svg" alt="Бесплатная доставка" style={{paddingRight:'8px'}} />
+                                    Бесплатная доставка
+                              </div>
                         </div>
                         </span>
-                        ):null}
+                        ):(
+                              <div> 
+                                    {openMenuList &&(
+                                          <div>
+                                                <div className={cartClass.bought}>
+                                                      <div>
+                                                            <SelectedFood/>
+                                                      </div>
+                                                </div> 
+                                                <TotalAmount totalPrice={countTheCart}/>
+                                                <Button first={'order'} onClick={openToOrder}>Оформить заказ</Button>
+                                                <div className={cartClass.freeOrder} style={{display:'flex',alignItems:'center',justifyContent:"space-between"}}>
+                                                <div style={{display:"flex",alignItems:"center"}}>
+                                                <img src="/icons/freeOrder.svg" alt="Бесплатная доставка" style={{paddingRight:'8px'}} />
+                                                      Бесплатная доставка
+                                                </div>
+                                                <div className={cartClass.putAway} onClick={handleOpenTheMenu}>
+                                                      свернуть
+                                                </div>
+                                                </div>
+                                          </div>
+                                    )}
+                              </div>
+                        )}
                   </div>     
                   {order ? 
                   <Modal>

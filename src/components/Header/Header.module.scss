@@ -4,6 +4,14 @@ header{
             background: #FFAB08;
             border-end-end-radius: 60%;
             border-end-start-radius: 60%;
+            @media (max-width:540px){  
+                  height: 490px;
+                  
+            }
+            @media (max-width:350px){  
+                  height: 550px;
+                  
+            }
             .wrapper{
                   margin: 0 auto;
                   max-width: 1440px;

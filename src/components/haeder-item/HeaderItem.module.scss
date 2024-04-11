@@ -21,16 +21,21 @@
                   justify-content: center;
                   
             }
+            
       }
       .text{
             font-family: Nunito;
             font-weight: 800;
             font-size: 50px;
-            line-height: 60px;
+            line-height: 75px;
             margin-left: 21px;
             @media (max-width:991px){  
                   font-size: 20px;
                   line-height: 36px;
+            }
+            @media (max-width:540px){  
+                  text-align: center;
+                  
             }
             & h1{
                   & span{
@@ -42,9 +47,12 @@
             font-weight: 400;
             font-size: 16px;
             color: #FFFFFF;
+            @media (max-width:540px){  
+                  text-align: center;
+                  
+            }
             & span{
                   font-weight: 600;
-                 
             }
       }
 }

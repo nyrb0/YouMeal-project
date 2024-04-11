@@ -8,18 +8,26 @@
             margin: 0 auto;
             max-width: 1440px;
             padding-bottom: 39px;
+            height: 100%;
             .contact{
                   margin-left: 10px;      
                   display: flex;
                   @media (max-width:826px){  
                         display: block;
                   }
+                  .title{
+                        & img{
+                              width: 150px;
+                        }
+                  }
                   align-items: center;
                   justify-content: space-between;
                   .callAndKnowAbout{
                         display: flex;
                         padding-right: 10px;
-                        
+                        @media (max-width:540px){  
+                              display: block;
+                        }
                         .number{
                               padding-right: 126px;
                               .direction{
@@ -48,6 +56,7 @@
             }
             .year{
                   padding-top: 60px;
+                  margin-left: 10px; 
             }
       }
       

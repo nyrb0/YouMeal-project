@@ -9,6 +9,8 @@
             background: #FFFFFF;
             border-radius: 10px;
             padding: 0 16px 24px 16px;
+            .bought{
+            }
             .cart{
                   padding-top: 24px;
                   .cartHeader{
@@ -32,6 +34,10 @@
             }
             .freeOrder{
                   padding-top: 12px;
+                  font-size: 12px;
+                  .putAway{
+                        color: #B1B1B1;
+                  }
             }
       }
       .order{
