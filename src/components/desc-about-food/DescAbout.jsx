@@ -26,7 +26,7 @@ const DescAbout = ({isOpen,desc})=>{
                         <Exit onClick={isOpen}/>
                   </div>
                   <div className={descAboutClass.title}>
-                        Мясная бомба
+                        {desc.title}
                   </div>
                   <div className={descAboutClass.fullDesc}>
                         <div className={descAboutClass.leftPlace} >
@@ -52,7 +52,7 @@ const DescAbout = ({isOpen,desc})=>{
                                     (<div>Состав неизвестно</div>)}
                                     </div>
                                     <div className={descAboutClass.weight}>
-                                          {desc.weight}г,
+                                          {desc.weight}г, ккал: {desc.kcal ? desc.kcal: 'неизвестно'}
                                     </div>
                               </div>
                         </div>

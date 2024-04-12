@@ -7,6 +7,9 @@ import LeftCart from "./components/left-cart/LeftCart"
 import { Provider } from "react-redux"
 import store from "./cartFoodStore"
 import Footer from "./components/footer/Footer"
+import PageSnacks from "./PAGES/snacks-page/PageSnacks"
+import HotDogs from "./PAGES/hot-dogs/HotDogs"
+import PageCombo from "./PAGES/page-combo/PageCombo"
 function App() {
   
 
@@ -22,6 +25,10 @@ function App() {
               </div>
               <Routes>
                 <Route path={'/hamburger'} element={<PageHamburger/>}/>
+                <Route path={'/snacks'} element={<PageSnacks/>}/>
+                <Route path={'/snacks'} element={<PageSnacks/>}/>
+                <Route path={'/hotDogs'} element={<HotDogs/>}/>
+                <Route path={'/combo'} element={<PageCombo/>}/>
               </Routes>
             </div>
           </main>

@@ -1,6 +1,9 @@
 .desc{
       padding: 24px 24px 0 24px;
       position: relative;
+      @media (max-width:530px) {
+            height: 1000px;
+      }
       .exit{
             position: absolute;
             top: 24px;
@@ -10,9 +13,18 @@
             font-weight: 600;
             font-size: 40px;
             padding-bottom: 24px;
+            @media (max-width:530px) {
+                 font-size: 28px;
+            }
       }
       .fullDesc{
             display: flex;
+
+            @media (max-width:530px) {
+                  display: block;
+
+            }
+
             .leftPlace{
                   .img{
                         & img{
@@ -21,25 +33,43 @@
                               border-radius: 20px;
                               margin-right:16px;
                               margin-bottom: 40px;
+                              @media (max-width:530px) {
+                                    margin-bottom: 15px;
+                                    margin-right:0px;
+                              }
                         }
                   }
                   .btn{
                         width: 276px;
                         margin-bottom: 48px;
+                        @media (max-width:530px) {
+                              display: none;
+                        }
                   }
             }
             .fullDescText{
                   .description{
                         font-weight: 400;
                         line-height: 20.8px;
+                        @media (max-width:654px) {
+                              font-size: 12px;
+                              max-width: 300px;
+                        }
                   }
                   .recipe{
                         padding-top: 10px;
                         padding-bottom: 4px;
                         font-size: 12px;
                         font-weight: 600;
+                        @media (max-width:654px) {
+                              font-size: 10px;
+                        }
                         .recipeList{
                               font-weight: 400;
+                        }
+                        .weight{
+                              color: #B1B1B1;
+                              font-size: 12px;
                         }
                   }
             }

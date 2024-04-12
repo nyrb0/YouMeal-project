@@ -8,6 +8,10 @@
       width: 100%;
       height: 40px;
       cursor: pointer;
+      @media (max-width:654px) {
+            font-size: 12px;
+      }
+      
 }
 .first{
       background: #FFAB08;
