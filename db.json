@@ -4,11 +4,11 @@
         { "id": 2, "title": "Закуски", "url":"https://cdn-icons-png.flaticon.com/512/4506/4506204.png","toLink":"/snacks"},
         { "id": 3, "title": "Хот-доги" , "url":"https://cdn-icons-png.flaticon.com/512/4803/4803052.png","toLink":"/hotDogs"},
         { "id": 4, "title": "Комбо", "url":"https://cdn-icons-png.flaticon.com/512/4221/4221407.png","toLink":"/combo"},
-        { "id": 5, "title": "Шаурма", "url":"https://cdn-icons-png.flaticon.com/512/289/289672.png" },
-        { "id": 6, "title": "Пицца", "url":"https://cdn-icons-png.flaticon.com/512/6978/6978255.png" },
-        { "id": 7, "title": "Вок", "url":"https://cdn-icons-png.flaticon.com/512/688/688029.png" },
-        { "id": 8, "title": "Десерты", "url":"https://cdn-icons-png.flaticon.com/512/7182/7182828.png" },
-        { "id": 9, "title": "Соусы", "url":"https://cdn-icons-png.flaticon.com/512/5110/5110713.png" }
+        { "id": 5, "title": "Шаурма", "url":"https://cdn-icons-png.flaticon.com/512/289/289672.png","toLink":"/shawarma" },
+        { "id": 6, "title": "Пицца", "url":"https://cdn-icons-png.flaticon.com/512/6978/6978255.png","toLink":"/pizza" },
+        { "id": 7, "title": "Вок", "url":"https://cdn-icons-png.flaticon.com/512/688/688029.png","toLink":"/wok" },
+        { "id": 8, "title": "Десерты", "url":"https://cdn-icons-png.flaticon.com/512/7182/7182828.png","toLink":"/dessert" },
+        { "id": 9, "title": "Соусы", "url":"https://cdn-icons-png.flaticon.com/512/5110/5110713.png","toLink":"/sauce" }
       ],
       
       "burgersData":[
@@ -280,7 +280,7 @@
             "Горчица",
             "Лаваш"
           ],
-          "url": "https://example.com/classic_shawarma.jpg"
+          "url": "https://static.1000.menu/img/content-v2/05/d8/21554/klassicheskaya-shaurma_1685711281_2_max.jpg"
         },
         {
           "id": 34,
@@ -294,7 +294,7 @@
             "Соус на выбор",
             "Лаваш"
           ],
-          "url": "https://example.com/vegetable_shawarma.jpg"
+          "url": "https://the-challenger.ru/wp-content/uploads/2016/08/veggie-wrap-800x533.jpg"
         },
         {
           "id": 35,
@@ -310,10 +310,239 @@
             "Соус чесночный",
             "Лаваш"
           ],
-          "url": "https://example.com/meat_shawarma.jpg"
+          "url": "https://imgproxy.sbermarket.ru/imgproxy/width-auto/czM6Ly9jb250ZW50LWltYWdlcy1wcm9kL3Byb2R1Y3RzLzI4ODgzODAzL29yaWdpbmFsLzEvMjAyMy0xMi0wN1QxMCUzQTAzJTNBMDAuNzYwNjQyJTJCMDAlM0EwMC8yODg4MzgwM18xLmpwZw==.jpg"
+        }
+      ],
+      "pizza":[
+        {
+          "id": 36,
+          "title": "Маргарита",
+          "price": 250,
+          "description": "Классическая пицца с томатным соусом, моцареллой и свежей базиликой.",
+          "weight": 450,
+          "kcal": 700,
+          "recipe": [
+            "Томатный соус",
+            "Моцарелла",
+            "Свежая базилика",
+            "Тесто для пиццы"
+          ],
+          "url": "https://lh3.googleusercontent.com/-F7-f2RyixFJ_0-MIGehlz7lp08CkWuy7Y64qDx8zcSrAyHA_uWVnJx1XOVAHg_qoFD7fW34aWScKlOz7tlHx8LeBxDoB64vaZ6LCKKMAPPnr8-QTpPpQVVK-xGPWFZomSVkVZXW"
+        },
+        {
+          "id": 37,
+          "title": "Пепперони",
+          "price": 280,
+          "description": "Пицца с пикантным пепперони, томатным соусом и моцареллой.",
+          "weight": 480,
+          "kcal": 750,
+          "recipe": [
+            "Томатный соус",
+            "Моцарелла",
+            "Пепперони",
+            "Тесто для пиццы"
+          ],
+          "url": "https://s1.eda.ru/StaticContent/Photos/120131085053/171027192707/p_O.jpg"
+        },
+        {
+          "id": 38,
+          "title": "Гавайская",
+          "price": 300,
+          "description": "Пицца с кусочками ананаса, ветчиной, томатным соусом и моцареллой.",
+          "weight": 500,
+          "kcal": 800,
+          "recipe": [
+            "Томатный соус",
+            "Моцарелла",
+            "Ананас",
+            "Ветчина",
+            "Тесто для пиццы"
+          ],
+          "url": "https://lenta.servicecdn.ru/globalassets/recepty/g/---14/---.jpg?preset=medium"
+        },
+        {
+          "id": 39,
+          "title": "Четыре сыра",
+          "price": 320,
+          "description": "Пицца с соусом из четырех видов сыра: моцареллы, гауды, дор-блю и пармезана.",
+          "weight": 520,
+          "kcal": 850,
+          "recipe": [
+            "Томатный соус",
+            "Моцарелла",
+            "Гауда",
+            "Дор-блю",
+            "Пармезан",
+            "Тесто для пиццы"
+          ],
+          "url": "https://cdn.vkuso.ru/uploads/103455_44c225d9b5c116d917b8481677b22c92_090620-062244.jpg"
+        },
+        {
+          "id": 40,
+          "title": "Вегетарианская",
+          "price": 290,
+          "description": "Пицца с томатным соусом, свежими овощами (помидоры, перцы, грибы), моцареллой и оливками.",
+          "weight": 490,
+          "kcal": 780,
+          "recipe": [
+            "Томатный соус",
+            "Моцарелла",
+            "Помидоры",
+            "Перцы",
+            "Грибы",
+            "Оливки",
+            "Тесто для пиццы"
+          ],
+          "url": "https://vilkin.pro/wp-content/uploads/2019/03/vegetarianskaya-picca-770x513.jpg"
+        }
+      ],
+      "wok":[
+        {
+          "id": 41,
+          "title": "Овощной вок",
+          "price": 200,
+          "description": "Свежие овощи, обжаренные на сковороде в соусе терияки, подается с рисом.",
+          "weight": 400,
+          "kcal": 350,
+          "url": "https://www.vkusnyblog.com/wp-content/uploads/2019/02/ovoschi-wok.jpg"
+        },
+        {
+          "id": 42,
+          "title": "Куриный вок",
+          "price": 250,
+          "description": "Кусочки курицы, обжаренные с овощами и соусом чили, подается с лапшой.",
+          "weight": 450,
+          "kcal": 420,
+          "url": "https://static.1000.menu/img/content-v2/dd/22/19030/lapsha-vok-s-kuricei-i-ovoshchami_1613557344_14_max.jpg"
+        },
+        {
+          "id": 43,
+          "title": "Говяжий вок",
+          "price": 280,
+          "description": "Нежное говяжье мясо, обжаренное с ароматными специями и соусом соевого соуса, подается с рисом.",
+          "weight": 500,
+          "kcal": 480,
+          "url": "https://img.freepik.com/premium-photo/beef-wok-traditional-chinese-mongolian-beef-stir-fry-in-chinese-cast-iron-wok-with-cooking-chopsticks_211786-177.jpg"
+        },
+        {
+          "id": 44,
+          "title": "Морепродуктовый вок",
+          "price": 300,
+          "description": "Креветки, кальмары и мидии, обжаренные в соусе ойстер, подается с лапшой.",
+          "weight": 550,
+          "kcal": 520,
+          "url": "https://korfood.ru/upload/disk/194/kmrpzfl538cq55ki5yhd00lx68kcqy6o"
+        }
+      ],
+      "dessert":[
+        {
+          "id": 45,
+          "title": "Чизкейк Нью-Йорк",
+          "price": 180,
+          "description": "Нежный чизкейк с традиционным вкусом Нью-Йорка, украшенный ягодным соусом.",
+          "weight": 200,
+          "kcal": 380,
+          "recipe": [
+            "Творожный сыр",
+            "Яйца",
+            "Сахар",
+            "Сливочное масло",
+            "Ванильный экстракт",
+            "Печенье для основы",
+            "Ягодный соус"
+          ],
+          "url": "https://annatomilchik.ru/wp-content/uploads/2021/07/chizkejk-nyu-jork.jpg"
+        },
+        {
+          "id": 46,
+          "title": "Тирамису",
+          "price": 200,
+          "description": "Итальянский десерт из слоев маскарпоне, кофейных пропитанных бисквитов и какао.",
+          "weight": 220,
+          "kcal": 420,
+          "recipe": [
+            "Маскарпоне",
+            "Сахар",
+            "Яйца",
+            "Савоярди (итальянские бисквиты)",
+            "Кофе",
+            "Какао"
+          ],
+          "url": "https://ist.say7.info/img0005/69/569_0173u3g_3966_1024.jpg"
+        },
+        {
+          "id": 47,
+          "title": "Шоколадный фондан",
+          "price": 220,
+          "description": "Нежный шоколадный кекс с жидким шоколадным сердцем, подается с мороженым и ягодами.",
+          "weight": 250,
+          "kcal": 450,
+          "recipe": [
+            "Шоколад",
+            "Сливочное масло",
+            "Яйца",
+            "Мука",
+            "Сахар",
+            "Мороженое",
+            "Ягоды"
+          ],
+          "url": "https://www.povarenok.ru/data/cache/2015oct/02/28/1285101_57511-710x550x.jpg"
+        },
+        {
+          "id": 48,
+          "title": "Фруктовый салат",
+          "price": 150,
+          "description": "Свежие фрукты (яблоки, апельсины, виноград, клубника) подается с натуральным йогуртом.",
+          "weight": 180,
+          "kcal": 220,
+          "recipe": [
+            "Яблоки",
+            "Апельсины",
+            "Виноград",
+            "Клубника",
+            "Натуральный йогурт"
+          ],
+          "url": "https://cdn-m.sport24.ru/m/c0be/d0a6/9ec9/4853/9ca8/0b7e/1946/03eb/1600_10000_max.jpeg"
+        }
+      ],
+      "sauce":[
+        {
+          "id": 49,
+          "title": "Соус терияки",
+          "price": 50,
+          "description": "Ароматный соус с традиционным японским вкусом, подходит для маринада мяса или приготовления вок-блюд.",
+          "weight": 150,
+          "kcal": 120,
+          "url": "https://tamaki.ru/upload/resize_cache/webp/iblock/2d2/496_496_1/n64yhjz1f3uhtz0h5vbe1fygm2g31rze.webp"
+        },
+        {
+          "id": 50,
+          "title": "Соус чили",
+          "price": 40,
+          "description": "Острый соус с пикантным вкусом, идеально подходит для заправки салатов или приготовления азиатских блюд.",
+          "weight": 120,
+          "kcal": 90,
+          "url": "https://marr.ru/upload/resize_cache/webp/iblock/955/igouw3upvy1hp69zk0v93wf7kkck9knc.webp"
+        },
+        {
+          "id": 51,
+          "title": "Соус соевый",
+          "price": 30,
+          "description": "Классический соевый соус с солоноватым вкусом, идеально подходит для заправки суши, роллов или приготовления маринада.",
+          "weight": 100,
+          "kcal": 80,
+          "url": "https://cdn-img.perekrestok.ru/i/800x800-fit/xdelivery/files/ff/1f/0ecbb2b42ea954e3cb9d0ccda6e4.jpg"
+        },
+        {
+          "id":52,
+          "title": "Соус медово-горчичный",
+          "price": 60,
+          "description": "Сладко-пряный соус с балансом меда и горчицы, прекрасно сочетается с мясными закусками или салатами.",
+          "weight": 180,
+          "kcal": 150,
+          "url": "https://ir.ozone.ru/s3/multimedia-c/c1000/6670150608.jpg"
         }
       ]
-      
       
       
     }

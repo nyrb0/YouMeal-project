@@ -9,7 +9,7 @@ import Modal from '../Modal/Modal';
 import Exit from '../UI/Button/exit/Exit';
 import Input from '../UI/input/Input';
 import Checkbox from '../UI/checkbox/Checkbox';
-const LeftCart = (   )=>{
+const LeftCart = ()=>{
       const countTheCart = useSelector(state=> state.foodsCart.cartStateNow)
       const [order,setOrder]=useState(false)
       const [isScreen ,setIsScreen] = useState(false)
@@ -48,7 +48,8 @@ const LeftCart = (   )=>{
                               <div className={cartClass.line}>
                               </div>
                         </div>
-                        {isScreen ? 
+                        {isScreen ? (
+                        countTheCart.length ?
                         (<span>
                               <div className={cartClass.bought}>
                                     <div>
@@ -63,7 +64,7 @@ const LeftCart = (   )=>{
                                     Бесплатная доставка
                               </div>
                         </div>
-                        </span>
+                        </span>): "Тут пока пусто :("
                         ):(
                               <div> 
                                     {openMenuList &&(

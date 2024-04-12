@@ -10,6 +10,11 @@ import Footer from "./components/footer/Footer"
 import PageSnacks from "./PAGES/snacks-page/PageSnacks"
 import HotDogs from "./PAGES/hot-dogs/HotDogs"
 import PageCombo from "./PAGES/page-combo/PageCombo"
+import PageShawarma from "./PAGES/page-shawarma/PageShawarma"
+import PagePizza from "./PAGES/page-pizza/PagePizza"
+import PageWok from "./PAGES/page-wok/PageWok"
+import PageDessert from "./PAGES/page-dessert/PageDessert"
+import PageSauce from "./PAGES/page-sauce/PageSauce"
 function App() {
   
 
@@ -29,6 +34,11 @@ function App() {
                 <Route path={'/snacks'} element={<PageSnacks/>}/>
                 <Route path={'/hotDogs'} element={<HotDogs/>}/>
                 <Route path={'/combo'} element={<PageCombo/>}/>
+                <Route path={'/shawarma'} element={<PageShawarma/>}/>
+                <Route path={'/pizza'} element={<PagePizza/>}/>
+                <Route path={'/wok'} element={<PageWok/>}/>
+                <Route path={'/dessert'} element={<PageDessert/>}/>
+                <Route path={'/sauce'} element={<PageSauce/>}/>
               </Routes>
             </div>
           </main>
