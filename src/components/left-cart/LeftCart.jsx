@@ -14,6 +14,11 @@ const LeftCart = ()=>{
       const [order,setOrder]=useState(false)
       const [isScreen ,setIsScreen] = useState(false)
       const [openMenuList,setOpenMenuList]=useState(false)
+      const [selectedOption,setSelectedOption] = useState('option2')
+
+      const handleOptionChanges = (event)=>{
+            setSelectedOption(event.target.value)
+      }
       const openToOrder = ()=>{
             setOrder(order=>!order)
       }
@@ -116,24 +121,36 @@ const LeftCart = ()=>{
                                                 <div className={cartClass.checkbox} >
                                                       <label>
                                                             <div className={cartClass.selfDelivery}>
-                                                                  <Checkbox/><span></span>Самовывоз
+                                                                  <Checkbox 
+                                                                  onChange={handleOptionChanges}
+                                                                  value={"option1"}
+                                                                  checked={selectedOption === 'option1'}
+                                                                  /><span></span>Самовывоз
                                                             </div>
                                                             <div className={cartClass.deliveryTo}>
-                                                                  <Checkbox/><span>Доставка</span>
+                                                                  <Checkbox
+                                                                  onChange={handleOptionChanges}
+                                                                  value={"option2"}
+                                                                  checked={selectedOption === 'option2'}
+                                                                  /><span>Доставка</span>
                                                             </div>
                                                       </label>
                                                 </div>
-                                                <div className={cartClass.address1}>
-                                                      <Input placeholder={'Улица, дом, квартира'}/>
-                                                </div>
-                                                <div className={cartClass.address2}>
-                                                      <div className={cartClass.floor}>
-                                                            <Input placeholder={'Этаж'}/>
+                                                {selectedOption === 'option2' && (
+                                                      <div>
+                                                            <div className={cartClass.address1}>
+                                                                  <Input placeholder={'Улица, дом, квартира'}/>
+                                                            </div>
+                                                            <div className={cartClass.address2}>
+                                                                  <div className={cartClass.floor}>
+                                                                        <Input placeholder={'Этаж'}/>
+                                                                  </div>
+                                                                  <div className={cartClass.addressNumber}>
+                                                                        <Input placeholder={'Домофон'}/>
+                                                                  </div>                                                  
+                                                            </div>
                                                       </div>
-                                                      <div className={cartClass.addressNumber}>
-                                                            <Input placeholder={'Домофон'}/>
-                                                      </div>                                                  
-                                                </div>
+                                                )}
                                           </div>
                                           <div className={cartClass.implement}>
                                                 <Button first={"order"}>Оформить</Button>

@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react';
 import ItemFoods from '../item-foods/ItemFoods';
 import structureClass from './Structure.module.scss'
 
-const Structure = ({urlToData})=>{
-
+const Structure = ({urlToData,setInnerOpen})=>{
+      const [open,setOpen]=useState(null)
       const [dataProgress,setDataProgress]=useState([])
-
+      const giveToUseState = (state)=>{
+            setOpen(state)
+      }
       useEffect(()=>{
             const data = async()=>{
                   try{
@@ -27,7 +29,7 @@ const Structure = ({urlToData})=>{
             <div className={structureClass.structures}>
                   <div className={structureClass.contents}> 
                         <div className={structureClass.innerContent}>
-                              {dataProgress.map(data=><ItemFoods  data={data} key={data.id}/>)}
+                              {dataProgress.map(data=><ItemFoods  data={data} key={data.id} setInnerOpen={giveToUseState}/>)}
                         </div>
                   </div>
             </div>

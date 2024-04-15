@@ -4,17 +4,15 @@ import selectedFoodClass  from './SelectedFood.module.scss'
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import Amount from '../amount/Amount';
+import Modal from '../Modal/Modal';
+import DescAbout from '../desc-about-food/DescAbout';
 const SelectedFood = ()=>{
       const inData = useSelector(state=>state.foodsCart.cartStateNow)
-      const [quantity,setQuantity]=useState(
-            inData.map(item=> ({...item, quantityCount:0}))
-      ); 
-      const upQuantity = ()=>{
-            setQuantity(prevQuantity=> prevQuantity.map(item=>({
-                  ...item,quantityCount: item.quantityCount+1
-            })))  
+      const [openIsTheSelectedClick,setIsOpenTheSelectedClick]=useState(false)
+      const funcOpen = ()=>{
+            setIsOpenTheSelectedClick(open=>!open)
       }
-      console.log(quantity)
+      
       return(
             <div className={selectedFoodClass.theFood}>
                   <div className={selectedFoodClass.wrapper}>
@@ -24,20 +22,20 @@ const SelectedFood = ()=>{
                               </div>
                         ):(
                         inData.map(selected=>(
-                              <div className={selectedFoodClass.content} key={selected.id}>
+                              <div className={selectedFoodClass.content} key={selected.id} >
                                     <div className={selectedFoodClass.line}>
                                     </div>                  
                                     <div className={selectedFoodClass.contentTwo}>
-                                          <div className={selectedFoodClass.info}>
+                                          <div className={selectedFoodClass.info} >
                                                 <div className={selectedFoodClass.thePhoto}>
-                                                      <img src={selected.url} alt="" />
+                                                      <img src={selected.url} alt="image"onClick={funcOpen} />
                                                 </div>
                                                 <div className={selectedFoodClass.description}>
                                                       <div className={selectedFoodClass.title}>
                                                             {selected.title}
                                                       </div>
                                                       <div className={selectedFoodClass.weight}>
-                                                            {selected.weight}г
+                                                            { selected.weight || selected.weight.length ? `${selected.weight}г` : 'Неизвестно'}
                                                       </div>
                                                       <div className={selectedFoodClass.price}>
                                                             {selected.price}сом
@@ -46,6 +44,9 @@ const SelectedFood = ()=>{
                                           </div>
                                           <Amount/>
                                     </div>
+                                    {openIsTheSelectedClick ? (<Modal isOpen={funcOpen} infoData={selected}>
+                                                            <DescAbout isOpen={funcOpen} desc={selected}/>
+                                                            </Modal>):null}
                               </div>
                         )))}
                         

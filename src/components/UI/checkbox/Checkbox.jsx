@@ -1,8 +1,15 @@
 import checkClass from './Checkbox.module.scss'
 
-const Checkbox = ()=>{
+const Checkbox = ({value,checked,onChange})=>{
       return (
-                  <input type="radio"/>
+                  <label className={checkClass.check}>
+                        <input 
+                        type="radio"
+                        value={value}
+                        checked={checked}
+                        onChange={onChange}
+                        />
+                  </label>
       )
 }
 export default Checkbox

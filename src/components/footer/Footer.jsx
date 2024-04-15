@@ -32,8 +32,8 @@ const Footer = ()=>{
                               </div>
                         </div>
                         <div className={footerClass.year}>
-                              © YouMeal, 2022 <br />
-                              Design: Anastasia Ilina
+                              © YouMeal, 2024 <br />
+                              Dev: Kadyrov Nurbolot
                         </div>
                   </div>
             </div>
