@@ -28,18 +28,18 @@ function App() {
               <div>
                 <LeftCart />
               </div>
-              <Routes>
-                <Route path={'/hamburger'} element={<PageHamburger/>}/>
-                <Route path={'/snacks'} element={<PageSnacks/>}/>
-                <Route path={'/snacks'} element={<PageSnacks/>}/>
-                <Route path={'/hotDogs'} element={<HotDogs/>}/>
-                <Route path={'/combo'} element={<PageCombo/>}/>
-                <Route path={'/shawarma'} element={<PageShawarma/>}/>
-                <Route path={'/pizza'} element={<PagePizza/>}/>
-                <Route path={'/wok'} element={<PageWok/>}/>
-                <Route path={'/dessert'} element={<PageDessert/>}/>
-                <Route path={'/sauce'} element={<PageSauce/>}/>
-              </Routes>
+                <Routes>
+                  <Route path={'/hamburger'} element={<PageHamburger/>}/>
+                  <Route path={'/snacks'} element={<PageSnacks/>}/>
+                  <Route path={'/snacks'} element={<PageSnacks/>}/>
+                  <Route path={'/hotDogs'} element={<HotDogs/>}/>
+                  <Route path={'/combo'} element={<PageCombo/>}/>
+                  <Route path={'/shawarma'} element={<PageShawarma/>}/>
+                  <Route path={'/pizza'} element={<PagePizza/>}/>
+                  <Route path={'/wok'} element={<PageWok/>}/>
+                  <Route path={'/dessert'} element={<PageDessert/>}/>
+                  <Route path={'/sauce'} element={<PageSauce/>}/>
+                </Routes>
             </div>
           </main>
         </div>

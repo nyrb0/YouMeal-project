@@ -25,7 +25,11 @@ const Structure = ({urlToData})=>{
       
       return(
             <div className={structureClass.structures}>
-                  {dataProgress.map(data=><ItemFoods  data={data} key={data.id}/>)}
+                  <div className={structureClass.contents}> 
+                        <div className={structureClass.innerContent}>
+                              {dataProgress.map(data=><ItemFoods  data={data} key={data.id}/>)}
+                        </div>
+                  </div>
             </div>
       )
 }

@@ -18,6 +18,9 @@
                   .title{
                         & img{
                               width: 150px;
+                              @media (max-width:183px){  
+                                    width: 100px;
+                              }
                         }
                   }
                   align-items: center;
@@ -39,7 +42,13 @@
                                     align-items: center;
                                     & img{
                                           position: relative;
-                                          top: 2px
+                                          top: 2px;
+                                          @media (max-width:183px){  
+                                                width: 10px;
+                                          }
+                                    }
+                                    @media (max-width:183px){  
+                                          font-size: 9px;
                                     }
                               }
                         }

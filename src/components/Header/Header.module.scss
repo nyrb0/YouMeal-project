@@ -5,12 +5,20 @@ header{
             border-end-end-radius: 60%;
             border-end-start-radius: 60%;
             @media (max-width:540px){  
-                  height: 490px;
-                  
+                  height: 550px;
+                  border-end-end-radius: 45%;
+                  border-end-start-radius: 45%;
             }
             @media (max-width:350px){  
                   height: 550px;
-                  
+            }
+            @media (max-width:269px){   
+                  height: 470px;
+            }
+            @media (max-width:213px){   
+                  height: 400px;
+                  border-end-end-radius: 35%;
+border-end-start-radius: 35%;
             }
             .wrapper{
                   margin: 0 auto;

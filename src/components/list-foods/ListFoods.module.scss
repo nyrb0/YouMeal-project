@@ -1,24 +1,34 @@
-.navigation{
-      display: flex;
-      justify-content: space-between;
-      .menuList{
-            background: #FFFFFF;
-            padding: 4px 14px;
+.list {
+      .navigation {
             display: flex;
-            border-radius: 30px;
-            align-items: center;
-            .titleList{ 
+            justify-content: space-between;
+            overflow-x: auto;
+            overflow-y: hidden; /* добавляем это свойство */
+            scrollbar-width: none; /* для Firefox */
+            -ms-overflow-style: none; /* для IE и Edge */
+            &::-webkit-scrollbar { /* для Webkit (Chrome, Safari, Opera) */
+            display: none;
+            }
+            white-space: nowrap;
+            .menuList {
+                  background: #FFFFFF;
+                  padding: 4px 14px;
+                  display: inline-flex;
+                  border-radius: 30px;
+                  align-items: center;
+                  margin-right: 10px;
+                  .titleList {
                   margin-right: 9px;
                   color: #000000;
                   font-weight: 400;
-                  font-size: 16px;  
-            }
-            .icon{
-                  & img{
-                  width: 24px;
-                  height: 24px;
+                  font-size: 16px;
                   }
-                  
+                  .icon {
+                        & img {
+                        width: 24px;
+                        height: 24px;
+                        }
+                  }
+            }
             }
       }
-}

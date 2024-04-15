@@ -1,8 +1,18 @@
 .structures{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      @media (max-width:576px) {
-            justify-content: center;
+      .contents{
+            display: flex;
+            @media (max-width:991px) {
+                  display: flex;
+                  justify-content: center;
+            }
+            .innerContent{
+            display: flex;
+            flex-wrap: wrap;
+            
+            @media (max-width: 509px) {
+                  display: flex;
+                  justify-content: center;
+            }
+            }
       }
 }

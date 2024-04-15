@@ -4,7 +4,10 @@
       color: black;
       padding: 0 0 12px 0;
       margin-right: 30px;
-      
+      @media (max-width:342px){    
+            width: 100%;
+            visibility: hidden;
+      }
       .wrapper{
             background: #FFFFFF;
             border-radius: 10px;
